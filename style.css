@@ -1,0 +1,47 @@
+
+body {
+  text-align: center;
+}
+
+h1 {
+text-align: center;
+}
+
+#carousel-images {
+  list-style: none;
+  width: 2034px; /*((679 - 1) * 3)*/
+  padding: 0px;
+  margin: 0px;
+  left: 2px; /*correction for li margin: -2px */
+  position: relative;
+}
+
+li {
+  display: inline-block;
+  margin: 0px -2px 0px -2px;
+}
+
+#carousel-container {
+margin-right: auto;
+margin-left: auto;
+background-color: black;
+width: 679px;
+height: 960px;
+overflow: hidden;
+/*display: inline-block;*/
+}
+
+.mover-button {
+
+/*display: inline-block;
+margin-right: auto;
+margin-left: auto;*/
+}
+
+#previous-button {
+  float: left;
+}
+
+#next-button {
+  float: right;
+}

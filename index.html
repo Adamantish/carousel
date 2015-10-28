@@ -3,45 +3,28 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="chrome=1" />
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>Hello World</title>
-  <script type="text/javascript" src="x3dom.js"></script>
 
 </head>
 
-<body style="text-align: center">
+<body>
 
- <h1>Hello 3D</h1>
+ <h1>Ride the Elena Carousel</h1>
 
- <x3d xmlns="http://www.x3dom.org/x3dom" showStat="false" showLog="false" x="0px" y="0px" width="800px" height="600px" altImg="helloX3D-alt.png">
-  <scene>
-    <viewpoint position='0 0 10' ></viewpoint>
-    <scene id="scene" render="true" pickmode="idBuf" dopickpass="true" sorttrans="true" frustumculling="true">
-
-     <!--  <shape render="true" ispickable="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1">
-        <appearance>
-          <material diffuseColor='0.603 0.894 0.909' ></material>
-        </appearance>
-        <box def="box" solid="true" ccw="true" usegeocache="true" size="5,5,5">
-
-        </box>
-      </shape> -->
-
-      <!-- <shape render="true" ispickable="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1">
-
-        <appearance>
-          <material diffuseColor='0.603 0.894 0.909' ></material>
-        </appearance>
-        <cone solid="true" ccw="true" usegeocache="true" bottomradius="1" height="2" bottom="true" subdivision="32" side="true">
-
-        </cone>
-      </shape> -->
-    </scene>
-  </x3d>
-
-  <script type="text/javascript" src="build_shapes.js"></script>
-
-  <button onclick="createRandomShape('foo')">Create Foo</button>
-  <button onclick="createRandomShape('bar')">Create Bar</button>
-  <button onclick="createRandomShape('fuzz')">Create Fuzz</button>
+ <button id="previous-button" class="mover-button" onclick="moveImage(true)">Back</button>
+ <button id="next-button" class="mover-button" onclick="moveImage()">Next</button>
+ 
+ <div id="carousel-container">
+   <ul id="carousel-images">
+    <li><img src="img/cow.jpg"></li>
+    <li><img src="img/ice.jpg"></li>
+    <li><img src="img/alice.jpg"></li>
+   </ul>
+ </div>
+ 
+ 
 </body>
+
+<script type="text/javascript" src="carousel.js"></script>
 </html>
