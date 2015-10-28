@@ -19,7 +19,9 @@ function moveImage(goBack) {
 
   currImage = currImage + sign
 
-  if(currImage >= 0 && currImage < numImages) {
+  currImage = currImage >= numImages ? 0 : currImage;
+  
+  if(currImage >= 0) {
     currImageLeft = initialOffset - (currImage * imageWidth)
     // currImageLeft = currImageLeft - (imageWidth * sign);
     images.setAttribute('style','left:' + currImageLeft + 'px');

@@ -1,6 +1,7 @@
 
 body {
   text-align: center;
+  font-family: Arial;
 }
 
 h1 {
@@ -15,7 +16,7 @@ text-align: center;
   left: 2px; /*correction for li margin: -2px */
   position: relative;
   transition: left 0.5s ease
-  
+
 }
 
 li {
@@ -43,11 +44,17 @@ li {
   position: relative;
   top: 500px; /*(height / 2) + 20 */
   z-index: 2;
-/*display: inline-block;
-margin-right: auto;
-margin-left: auto;*/
+  border: solid 1px black;
+  padding: 0.4em 0.6em 0.5em 0.6em;
+  font-size: 2em;
+  background-color: black;
+  color: white;
 }
 
+.mover-button:hover {
+  cursor: pointer;
+
+}
 #previous-button {
   display: inline-block;
   left: -400px; /*(width / 2) + 40*/
