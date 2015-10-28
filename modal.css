@@ -31,6 +31,7 @@ body {
   margin-left: auto;
   box-shadow: 0.5em 0.5em 0.5em;
   border-radius: 1em; 
+  transition: background-color 1s ease-in;
 
 }
 .modal-background {
@@ -38,8 +39,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(1, 1, 1, 0.8)
-  
+  background-color: rgba(1, 1, 1, 0.8);
+  transition: background-color 1s ease-in;
 
 }
 

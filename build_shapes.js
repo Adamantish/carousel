@@ -1,10 +1,11 @@
 var Scene = function() {
 
   var scene = document.getElementById("scene")
-    
+  var dimensionLimits = [6,2,4]
+  
     var randPosition = function() {
       
-      var dimensionLimits = [6,2,4]
+      
       var randCoords = []
       for (var i = 0; i < dimensionLimits.length ;i++) {
         var limit = dimensionLimits[i]
@@ -75,5 +76,3 @@ var Shape = function(name, transform, material, appearance) {
 function createRandomShape (shapeName) {
   Scene().createShape('0.603 0.894 0.909',shapeName);
 };
-
-createRandomShape()
