@@ -2,15 +2,28 @@
 images = document.getElementById('carousel-images');
 
 window.imageWidth = 679;
-// var currImageLeft = images.getAttribute('style', 'left');
-window.currImageLeft = 2
+window.currImage = 0
+window.initialOffset = 2
+window.currImageLeft = initialOffset
+
+function setImageUlWidth () { 
+  var images = document.getElementById('carousel-images')
+  window.numImages = images.childElementCount
+  images.setAttribute("style","width: " + (imageWidth - 1) * numImages + "px" )
+}
+
 
 function moveImage(goBack) {
   
   sign = !!goBack ? -1 : 1;
-  // console.log(currImageLeft)
 
-  currImageLeft = currImageLeft - (imageWidth * sign);
-  // console.log(currImageLeft)
-  images.setAttribute('style','left:' + currImageLeft + 'px');
+  currImage = currImage + sign
+
+  if(currImage >= 0 && currImage < numImages) {
+    currImageLeft = initialOffset - (currImage * imageWidth)
+    // currImageLeft = currImageLeft - (imageWidth * sign);
+    images.setAttribute('style','left:' + currImageLeft + 'px');
+  }
 }
+
+setImageUlWidth()
