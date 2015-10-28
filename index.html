@@ -5,6 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <title>Hello World</title>
   <script type="text/javascript" src="x3dom.js"></script>
+
 </head>
 
 <body style="text-align: center">
@@ -37,10 +38,10 @@
     </scene>
   </x3d>
 
-  <script type="text/javascript">
-    // Hello I'm Javascript
-  </script>
+  <script type="text/javascript" src="build_shapes.js"></script>
 
-  <button onclick="">Click Me!</button>
+  <button onclick="createRandomShape('foo')">Create Foo</button>
+  <button onclick="createRandomShape('bar')">Create Bar</button>
+  <button onclick="createRandomShape('fuzz')">Create Fuzz</button>
 </body>
 </html>
