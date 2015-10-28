@@ -33,15 +33,20 @@ overflow: hidden;
 
 .mover-button {
 
+  position: relative;
+  top: 500px; /*(height / 2) + 20 */
+  z-index: 2;
 /*display: inline-block;
 margin-right: auto;
 margin-left: auto;*/
 }
 
 #previous-button {
-  float: left;
+  display: inline-block;
+  left: -400px; /*(width / 2) + 40*/
 }
 
 #next-button {
-  float: right;
+  display: inline-block;
+  left: 400px; /*(width / 2) + 40*/
 }
