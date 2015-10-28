@@ -14,6 +14,8 @@ text-align: center;
   margin: 0px;
   left: 2px; /*correction for li margin: -2px */
   position: relative;
+  transition: left 0.5s ease
+  
 }
 
 li {
@@ -22,13 +24,18 @@ li {
 }
 
 #carousel-container {
-margin-right: auto;
-margin-left: auto;
-background-color: black;
-width: 679px;
-height: 960px;
-overflow: hidden;
-/*display: inline-block;*/
+  margin-right: auto;
+  margin-left: auto;
+  background-color: black;
+  width: 679px;
+  height: 960px;
+  overflow: hidden;
+  /*display: inline-block;*/
+}
+
+#carousel-images:hover {
+
+  
 }
 
 .mover-button {
