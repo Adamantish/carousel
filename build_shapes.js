@@ -3,6 +3,7 @@ var Scene = function() {
   var scene = document.getElementById("scene")
     
     var randPosition = function() {
+      
       var dimensionLimits = [6,2,4]
       var randCoords = []
       for (var i = 0; i < dimensionLimits.length ;i++) {
