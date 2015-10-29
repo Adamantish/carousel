@@ -12,21 +12,34 @@
 
  <h1>Ride the Elena Carousel</h1>
 
-
-   <div id="previous-button" class="mover-button" onclick="moveImage(true)"><</div>
-   <div id="next-button" class="mover-button" onclick="moveImage()">></div>
+   <div id="previous-button" class="mover-button" onclick="shiftImage(true)"><</div>
+   <div id="next-button" class="mover-button" onclick="shiftImage()">></div>
    <div id="carousel-container">
      <ul id="carousel-images">
       <li><img src="img/cow.jpg"></li>
       <li><img src="img/ice.jpg"></li>
       <li><img src="img/alice.jpg"></li>
+            <li><img src="img/cow.jpg"></li>
+      <li><img src="img/ice.jpg"></li>
+      <li><img src="img/alice.jpg"></li>
+            <li><img src="img/cow.jpg"></li>
+      <li><img src="img/ice.jpg"></li>
+      <li><img src="img/alice.jpg"></li>
+            <li><img src="img/cow.jpg"></li>
+      <li><img src="img/ice.jpg"></li>
+      <li><img src="img/alice.jpg"></li>
+                  <li><img src="img/cow.jpg"></li>
+      <li><img src="img/ice.jpg"></li>
+      <li><img src="img/alice.jpg"></li>
      </ul>
    </div>
-   <div id="jump-dots"></div>
 
+   <span class="jump-dot-page-shift-button" onclick="shiftJumpDotPage(true)"><</span>
+   <div id="jump-dots-container">
+    <div id="jump-dots"></div>
+   </div>
+   <span class="jump-dot-page-shift-button" onclick="shiftJumpDotPage()">></span>
 
- 
- 
 </body>
 
 <script type="text/javascript" src="carousel.js"></script>
