@@ -16,11 +16,11 @@ function moveImage(goBack) {
   
   sign = !!goBack ? -1 : 1;
 
-  currImage = currImage + sign
-  currImage = currImage >= numImages ? 0 : currImage;
+  var i = currImage + sign
+  i = i >= numImages ? 0 : i;
 
-  if(currImage >= 0) {
-    goToImage(currImage)
+  if(i >= 0) {
+    goToImage(i)
   }
 }
 
@@ -28,7 +28,10 @@ function goToImage(index) {
   currImageLeft = initialOffset - (index * imageWidth)
   images.setAttribute('style','left:' + currImageLeft + 'px');
   switchDotColour(index, true)
-  switchDotColour(currImage)
+  if(currImage !== index) {
+    switchDotColour(currImage);
+  }
+  
   currImage = index
 }
 
@@ -36,8 +39,8 @@ function switchDotColour(index, selected) {
   var lightGrey ="rgb(217, 217, 217)"
   var orange = "rgb(254, 169, 52)"
 
-  colour = selected ? orange : lightGrey;
-  dot = document.getElementById("dot" + index)
+  var colour = !!selected ? orange : lightGrey;
+  var dot = document.getElementById("dot" + index)
   dot.setAttribute("style","background-color:" + colour + ";")
 }
 function createJumpDots() {
@@ -56,3 +59,4 @@ function createJumpDots() {
 
 setImageUlWidth()
 createJumpDots()
+goToImage(0)
