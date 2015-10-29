@@ -20,12 +20,26 @@ function moveImage(goBack) {
   currImage = currImage >= numImages ? 0 : currImage;
 
   if(currImage >= 0) {
-    currImageLeft = initialOffset - (currImage * imageWidth)
-    // currImageLeft = currImageLeft - (imageWidth * sign);
-    images.setAttribute('style','left:' + currImageLeft + 'px');
+    goToImage(currImage)
   }
 }
 
+function goToImage(index) {
+  currImageLeft = initialOffset - (index * imageWidth)
+  images.setAttribute('style','left:' + currImageLeft + 'px');
+  switchDotColour(index, true)
+  switchDotColour(currImage)
+  currImage = index
+}
+
+function switchDotColour(index, selected) {
+  var lightGrey ="rgb(217, 217, 217)"
+  var orange = "rgb(254, 169, 52)"
+
+  colour = selected ? orange : lightGrey;
+  dot = document.getElementById("dot" + index)
+  dot.setAttribute("style","background-color:" + colour + ";")
+}
 function createJumpDots() {
 
   var dots = document.getElementById("jump-dots")
@@ -34,6 +48,8 @@ function createJumpDots() {
    
     var dot = document.createElement("div") 
     dot.setAttribute("class","jump-dot")
+    dot.setAttribute("id", "dot" + i)
+    dot.setAttribute("onclick","goToImage(" + i + ")")
     dots.appendChild(dot)
   }
 }

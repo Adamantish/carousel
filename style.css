@@ -66,12 +66,14 @@ li {
 }
 
 .jump-dot {
-  background-color: grey;
+  background-color: rgb(214,214,214);
   border-radius: 100%;
   width: 1em;
   height: 1em;
   display: inline-block;
   margin: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #jump-dots {
