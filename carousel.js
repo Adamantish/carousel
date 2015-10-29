@@ -3,13 +3,15 @@ images = document.getElementById('carousel-images');
 
 window.imageWidth = 679;
 window.currImage = 0
-window.initialOffset = 2
+window.initialOffset = 0
 window.currImageLeft = initialOffset
 
 function setImageUlWidth () { 
   var images = document.getElementById('carousel-images')
   window.numImages = images.childElementCount
-  images.setAttribute("style","width: " + (imageWidth - 1) * numImages + "px" )
+  var widthString = (imageWidth - 1) * numImages + "px"
+  images.style.width = widthString
+  images.setAttribute("width" , widthString )
 }
 
 function moveImage(goBack) {
@@ -43,6 +45,7 @@ function switchDotColour(index, selected) {
   var dot = document.getElementById("dot" + index)
   dot.setAttribute("style","background-color:" + colour + ";")
 }
+
 function createJumpDots() {
 
   var dots = document.getElementById("jump-dots")
