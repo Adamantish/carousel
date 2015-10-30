@@ -1,11 +1,13 @@
 
+// Bad lot of globals. If I got time I'd encapsulate in a class.
+
 dotsLimit = 12
 images = document.getElementById('carousel-images');
 dots = document.getElementById("jump-dots")
 lightGrey ="rgb(217, 217, 217)"
 orange = "rgb(254, 169, 52)"
   
-window.initialOffset = 0
+window.initialOffset = 1
 window.imageWidthPx = 680;
 window.dotWidthEm = 3
 window.currImage = 0
@@ -47,10 +49,6 @@ function shiftJumpDotPage(goBack) {
   }
 
   currDotPageStart = i
-  // var dotInPage = index % dotsLimit
-  // if(dotInPage >= (dotsLimit - 1)){
-
-  // }
 
 }
 
@@ -62,7 +60,6 @@ function goToImage(index) {
   if(currImage !== index) {
     switchDotColour(currImage);
   }
-  
   currImage = index
 }
 
