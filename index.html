@@ -13,8 +13,16 @@
  <h1>Ride the Elena Carousel</h1>
  <p>A few things by <a href="https://www.behance.net/desnatural">Ms Tural</a></p>
 
+
+
    <div id="previous-button" class="mover-button" onclick="shiftImage(true)"><</div>
+      <span class="jump-dot-page-shift-button" onclick="shiftJumpDotPage(true)"><</span>
+   <div id="jump-dots-container">
+    <div id="jump-dots"></div>
+   </div>
+   <span class="jump-dot-page-shift-button" onclick="shiftJumpDotPage()">></span>
    <div id="next-button" class="mover-button" onclick="shiftImage()">></div>
+   
    <div id="carousel-container">
      <ul id="carousel-images">
       <li><img src="img/shaving.png"></li>
@@ -36,11 +44,7 @@
      </ul>
    </div>
 
-   <span class="jump-dot-page-shift-button" onclick="shiftJumpDotPage(true)"><</span>
-   <div id="jump-dots-container">
-    <div id="jump-dots"></div>
-   </div>
-   <span class="jump-dot-page-shift-button" onclick="shiftJumpDotPage()">></span>
+ 
 
 </body>
 

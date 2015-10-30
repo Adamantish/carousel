@@ -54,12 +54,12 @@ li {
 }
 #previous-button {
   display: inline-block;
-  left: -400px; /*(width / 2) + 40*/
+  left: -50px; /*(width / 2) + 40*/
 }
 
 #next-button {
   display: inline-block;
-  left: 400px; /*(width / 2) + 40*/
+  left: 50px; /*(width / 2) + 40*/
 }
 
 .jump-dot {
